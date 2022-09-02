@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from "@mui/material"
 import {IconButton} from '@mui/material/';
-import { DeleteSharp, AccessTimeSharp, PlaceSharp, PhoneSharp } from '@mui/icons-material/';
+import { AccessTimeSharp, PlaceSharp, PhoneSharp, AccountCircleSharp, ShoppingCartSharp, SearchSharp } from '@mui/icons-material/';
 
 import './TopBar.scss'
 
@@ -24,13 +24,13 @@ const TopBar = () => {
             </div>
             <div className="top-bar-icons">
                 <IconButton>
-                    <DeleteSharp />
+                    <AccountCircleSharp />
                 </IconButton>
                 <IconButton>
-                    <DeleteSharp />
+                    <ShoppingCartSharp />
                 </IconButton>
                 <IconButton>
-                    <DeleteSharp />
+                    <SearchSharp />
                 </IconButton>
             </div>
         </div>

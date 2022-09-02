@@ -18,4 +18,14 @@
             gap: 1rem;
         }
     }
+
+    .top-bar-icons{
+        color: white;
+    }
+}
+
+@media screen and (max-width: 989px) {
+    .top-bar{
+        display: none;
+    }
 }
