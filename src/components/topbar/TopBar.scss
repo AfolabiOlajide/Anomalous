@@ -1,0 +1,21 @@
+.top-bar{
+    width: 100%;
+    padding: .05rem 5rem;
+    background-color: #DC9579;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .top-bar-info{
+        color: white;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .item{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
