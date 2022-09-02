@@ -5,6 +5,8 @@ import './index.scss'
 // pages import
 import HomePage from "./pages/home";
 import MarketPlace from "./pages/marketPlace";
+import Blog from "./pages/blog"
+import Contact from "./pages/contact"
 // components imports
 import NavBar from "./components/navbar/NavBar"
 import Footer from "./components/footer/Footer"
@@ -19,6 +21,8 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/marketplace' element={<MarketPlace />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/contact' element={<Contact />} />
       </Routes>
       <Footer />
     </div>
