@@ -53,9 +53,9 @@ const NavBar = () => {
 				<div className="search">
 					<TextField
 						id="outlined-basic"
-						label="Search"
+						label="Search Wears"
 						variant="outlined"
-						sx={{ width: "80%" }}
+						sx={{ width: "100%" }}
 					/>
 				</div>
 
@@ -75,14 +75,14 @@ const NavBar = () => {
 					<Link to="/profile" className="item" onClick={toggler}>
 						Profile
 					</Link>
-					<Link to="/Cart" className="item" onClick={toggler}>
+					<Link to="/cart" className="item" onClick={toggler}>
 						Cart
 					</Link>
 				</div>
 
 				<div className="cta">
 					<Box sx={{ marginBottom: "1rem" }}>
-						<Link to="">
+						<Link to="/login">
 							<Button
 								variant="contained"
 								sx={{ width: "100%" }}
@@ -93,7 +93,7 @@ const NavBar = () => {
 						</Link>
 					</Box>
 					<Box>
-						<Link to="">
+						<Link to="/signup">
 							<Button
 								variant="text"
 								sx={{

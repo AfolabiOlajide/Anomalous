@@ -4,18 +4,24 @@
     box-sizing: border-box;
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
-    font-family: 'Roboto Slab', serif;
-    overflow: hidden;
+    min-height: 100vh;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h4,h6{
-    font-family: 'Lato', sans-serif;
+    font-family: 'Roboto Slab', serif;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
 }
 
 .heading{
@@ -27,8 +33,6 @@ h1,h2,h3,h4,h4,h6{
     background-color: #E4EDFA;
 }
 
-.footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
+main{
+    min-height: 100vh;
 }
