@@ -7,6 +7,9 @@
 :root{
     --color-primary: #F2870D;
     --color-secondary: #DC9579;
+    --color-grey: rgb(120, 117, 117);
+    --bg-primary: #F7F8FC;
+    --bg-primary-variant: #E4EDFA;
 }
 
 
@@ -45,4 +48,10 @@ a{
 
 main{
     min-height: 100vh;
+}
+
+@media screen and (max-width: 500px) {
+    p{
+        font-size: .7rem;
+    }
 }
