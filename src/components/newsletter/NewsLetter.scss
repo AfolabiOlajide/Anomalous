@@ -1,0 +1,158 @@
+.newsletter-container{
+    position: relative;
+    padding: 4rem 0;
+    background: #fff;
+
+    .blue-box{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30%;
+        height: 70%;
+        background-color: #E4EDFA;
+    }
+
+    .dotted1{
+        position: absolute;
+        bottom: 5%;
+        right: 10%;
+        width: 6rem;
+        z-index: 2;
+        img{
+            width: 100%;
+        }
+    }
+
+    .newsletter{
+        position: relative;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #DC9579;
+        padding: 5rem 0;
+
+        .dotted2{
+            position: absolute;
+            top: -10%;
+            right: 10%;
+            width: 6rem;
+            img{
+                width: 100%;
+            }
+        }
+        .dotted3{
+            position: absolute;
+            bottom: 20%;
+            left: -5%;
+            width: 6rem;
+            img{
+                width: 100%;
+            }
+        }
+
+        .text{
+            color: rgb(255, 255, 255);
+            margin-bottom: 3rem;
+
+            h1{
+                margin: 1rem 0;
+            }
+        }
+
+        .cta{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            input{
+                padding: .7rem;
+                width: 40%;
+                border-radius: .5rem;
+                border: 0;
+                outline: 0;
+                margin-right: 1rem;
+            }
+
+            .btn{
+                padding: .4rem;
+                background-color: #F2870D;
+                color: white;
+                cursor: pointer;
+                outline: none;
+                border: none;
+                border-radius: .5rem;
+                box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .newsletter-container{
+        .dotted1{
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            width: 5rem;
+        }
+
+        .newsletter{
+            width: 80%;
+
+            .dotted2{
+                top: -10%;
+                right: 10%;
+                width: 4rem;
+            }
+            .dotted3{
+                bottom: 30%;
+                left: -10%;
+                width: 4rem;
+            }
+
+            .text{
+                font-size: .8rem;
+            }
+
+            .cta{
+                input{
+                    width: 60%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .newsletter-container{
+        .blue-box{
+            width: 50%;
+            height: 70%;
+            background-color: #E4EDFA;
+        }
+
+        .dotted1{
+            width: 4rem;
+        }
+
+        .newsletter{
+            width: 85%;
+            padding: 3rem 2rem;
+
+            .text{
+                font-size: .7rem;
+            }
+
+            .cta{
+                input{
+                    width: 80%;
+                    font-size: .7rem;
+                }
+
+                .btn{
+                    padding: .3rem;
+                }
+            }
+        }
+    }
+} 

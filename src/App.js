@@ -16,6 +16,7 @@ import Profile from "./pages/profile";
 import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
 import TopBar from "./components/topbar/TopBar";
+import NewsLetter from "./components/newsletter/NewsLetter";
 
 function App() {
 	return (
@@ -35,6 +36,7 @@ function App() {
 					<Route path="/profile" element={<Profile />} />
 				</Routes>
 			</main>
+			<NewsLetter />
 			<Footer />
 		</div>
 	);
