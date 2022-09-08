@@ -30,12 +30,12 @@
 		}
 	}
 
-	.about{
+	.about {
 		position: relative;
 		padding: 4rem 0;
 		background-color: var(--bg-primary);
 
-		.blue-box{
+		.blue-box {
 			position: absolute;
 			bottom: 0;
 			left: 0;
@@ -44,35 +44,78 @@
 			background-color: var(--bg-primary-variant);
 		}
 
-		.about-box{
+		.about-box {
 			position: relative;
 			width: 80%;
 			margin: 0 auto;
 
-			.img{
+			.img {
 				// width: 80%;
 				// height: 100%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
-				background-color: #E2E2EA;
+				background-color: #e2e2ea;
 				padding: 1rem;
 
-				img{
+				img {
 					width: 70%;
 				}
 			}
 
-			.about-desc{
-				p{
+			.about-desc {
+				p {
 					font-weight: 200;
 					font-size: 1rem;
 					color: black;
 				}
 
-				h2{
+				h2 {
 					font-size: 2rem;
 					margin: 1rem 0;
+				}
+			}
+		}
+	}
+
+	.featured-product {
+		padding: 2rem 0;
+		background: var(--bg-primary);
+
+		.container {
+			width: 80%;
+			margin: 0 auto;
+			h1 {
+				font-size: 2rem;
+				margin-bottom: 2rem;
+			}
+
+			.featured-items {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2rem;
+
+				.featured-item {
+					position: relative;
+					box-shadow: 0 0 1rem rgb(232, 234, 235);
+					transition: 500ms all ease;
+					border-radius: 0.5rem;
+
+					&:hover {
+						transform: scale(1.02);
+					}
+					img {
+						border-radius: inherit;
+						width: 100%;
+						object-fit: cover;
+					}
+					.desc {
+						position: absolute;
+						bottom: 10%;
+						left: 10%;
+						color: white;
+						font-size: 1.5rem;
+					}
 				}
 			}
 		}
@@ -80,14 +123,29 @@
 }
 
 @media screen and (max-width: 930px) {
-    .home {
+	.home {
 		.header {
 			height: 70vh;
 			background-size: cover;
 			background-position: center;
 			.desc {
 				.desc-box {
-                    margin-left: 4rem;
+					margin-left: 4rem;
+				}
+			}
+		}
+
+		.featured-product {
+			.container {
+				h1{
+					font-size: 1.5rem;
+				}
+				.featured-items {
+					.featured-item {
+						.desc {
+							font-size: 1rem;
+						}
+					}
 				}
 			}
 		}
@@ -102,13 +160,13 @@
 			// background-position: center;
 			.desc {
 				.desc-box {
-                    margin-left: 4rem;
+					margin-left: 4rem;
 					h1 {
 						font-size: 2rem;
 					}
-                    p{
-                        font-size: 1rem;
-                    }
+					p {
+						font-size: 1rem;
+					}
 				}
 			}
 		}
@@ -116,7 +174,7 @@
 }
 
 @media screen and (max-width: 500px) {
-    .home {
+	.home {
 		.header {
 			height: 50vh;
 			background-size: cover;
@@ -124,34 +182,45 @@
 			background-color: #e5ded6;
 			.desc {
 				.desc-box {
-                    margin-left: 2rem;
+					margin-left: 2rem;
 					h1 {
 						font-size: 1.2rem;
 					}
-                    p{
-                        font-size: .7rem;
-                        margin: 1rem 0;
-                    }
-                    .btn{
-                        font-size: .8rem;
-                    }
+					p {
+						font-size: 0.7rem;
+						margin: 1rem 0;
+					}
+					.btn {
+						font-size: 0.8rem;
+					}
 				}
 			}
 		}
 
-		.about{
+		.about {
 			padding: 2rem 0;
-			.blue-box{
+			.blue-box {
 				height: 50%;
 			}
 
-			.about-box{
+			.about-box {
 				width: 90%;
 
-				.about-desc{
-					h2{
+				.about-desc {
+					h2 {
 						font-size: 1.3rem;
 					}
+				}
+			}
+		}
+
+		.featured-product {
+			.container {
+				h1{
+					font-size: 1rem;
+				}
+				.featured-items {
+					grid-template-columns: repeat(2, 1fr);
 				}
 			}
 		}
