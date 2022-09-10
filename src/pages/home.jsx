@@ -1,5 +1,11 @@
-import { Button, Grid } from "@mui/material";
+import { Avatar, Button, Card, CardContent, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+
+import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
 
 import "./home.scss";
 import BagImg from "../assets/about-bag.png";
@@ -8,24 +14,29 @@ import MenCasuals from "../assets/men-casuals.png";
 import WomenCasuals from "../assets/women-casuals.png";
 
 const HomePage = () => {
+
 	return (
 		<h1 className="home">
 			{/* header */}
 			<div className="header">
 				<div className="desc">
 					<div className="desc-box">
-						<h1>An Exclusive yet affordable brand</h1>
+						<h1 className="heading">
+							An Exclusive yet affordable brand
+						</h1>
 						<p>
 							Get high quality wears that makes you look unique
 							and brings out the model in you
 						</p>
-						<Button
-							variant="contained"
-							style={{ color: "white" }}
-							className="btn"
-						>
-							Shop now
-						</Button>
+						<Link to="/marketplace">
+							<Button
+								variant="contained"
+								style={{ color: "white" }}
+								className="btn"
+							>
+								Shop now
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -39,7 +50,7 @@ const HomePage = () => {
 					</Grid>
 					<Grid item sm={6} xs={12} className="about-desc">
 						<p>About us</p>
-						<h2>
+						<h2 className="heading">
 							Looking for the right out fit for any event? We are
 							here for you!
 						</h2>
@@ -60,7 +71,9 @@ const HomePage = () => {
 							since the 1500s, when an unknown printer took a
 							galley.
 						</p>
-						<Button>Learn More</Button>
+						<Link to="/about">
+							<Button>Learn More</Button>
+						</Link>
 					</Grid>
 				</Grid>
 			</div>
@@ -68,7 +81,7 @@ const HomePage = () => {
 			{/* featured product */}
 			<div className="featured-product">
 				<div className="container">
-					<h1>Featured Products</h1>
+					<h1 className="heading">Featured Products</h1>
 					<div className="featured-items">
 						<Link to="">
 							<div className="featured-item">
@@ -130,6 +143,213 @@ const HomePage = () => {
 								<div className="desc">Coporate wears</div>
 							</div>
 						</Link>
+					</div>
+				</div>
+			</div>
+
+			{/* testimonials */}
+			<div className="testimonials">
+				<div className="container">
+					<h4 className="heading">Testimonials</h4>
+					<h2 className="heading">What Our Customers Say</h2>
+					<div className="items">
+						<Swiper
+							slidesPerView={2}
+							spaceBetween={10}
+							slidesPerGroup={2}
+							loop={true}
+							loopFillGroupWithBlank={true}
+							pagination={{
+								clickable: true,
+							}}
+							autoplay={{
+								delay: 2500,
+								disableOnInteraction: false,
+							}}
+							navigation={true}
+							modules={[Autoplay]}
+							className="mySwiper"
+						>
+							<SwiperSlide>
+								<Card className="item">
+									<CardContent>
+										<p>
+											Lorem Ipsum has been the industry's
+											standard dummy text ever since the
+											1500s, when an unknown printer took
+											a galley. Lorem Ipsum has been the
+											industry's standard dummy text ever
+											since the 1500s, when an unknown
+											printer took a galley.
+										</p>
+										<div className="customer">
+											<Avatar
+												src={MenCasuals}
+												className="customer-img"
+											/>
+											<div className="customer-info">
+												<h5 className="name">
+													Brentford Germain
+												</h5>
+												<h5 className="title">
+													CEO of Tukeng Tikang
+												</h5>
+											</div>
+										</div>
+									</CardContent>
+								</Card>
+							</SwiperSlide>
+
+							<SwiperSlide>
+								<Card className="item">
+									<CardContent>
+										<p>
+											Lorem Ipsum has been the industry's
+											standard dummy text ever since the
+											1500s, when an unknown printer took
+											a galley. Lorem Ipsum has been the
+											industry's standard dummy text ever
+											since the 1500s, when an unknown
+											printer took a galley.
+										</p>
+										<div className="customer">
+											<Avatar
+												src={MenCasuals}
+												className="customer-img"
+											/>
+											<div className="customer-info">
+												<h5 className="name">
+													Brentford Germain
+												</h5>
+												<h5 className="title">
+													CEO of Tukeng Tikang
+												</h5>
+											</div>
+										</div>
+									</CardContent>
+								</Card>
+							</SwiperSlide>
+
+							<SwiperSlide>
+								<Card className="item">
+									<CardContent>
+										<p>
+											Lorem Ipsum has been the industry's
+											standard dummy text ever since the
+											1500s, when an unknown printer took
+											a galley. Lorem Ipsum has been the
+											industry's standard dummy text ever
+											since the 1500s, when an unknown
+											printer took a galley.
+										</p>
+										<div className="customer">
+											<Avatar
+												src={MenCasuals}
+												className="customer-img"
+											/>
+											<div className="customer-info">
+												<h5 className="name">
+													Brentford Germain
+												</h5>
+												<h5 className="title">
+													CEO of Tukeng Tikang
+												</h5>
+											</div>
+										</div>
+									</CardContent>
+								</Card>
+							</SwiperSlide>
+
+							<SwiperSlide>
+								<Card className="item">
+									<CardContent>
+										<p>
+											Lorem Ipsum has been the industry's
+											standard dummy text ever since the
+											1500s, when an unknown printer took
+											a galley. Lorem Ipsum has been the
+											industry's standard dummy text ever
+											since the 1500s, when an unknown
+											printer took a galley.
+										</p>
+										<div className="customer">
+											<Avatar
+												src={MenCasuals}
+												className="customer-img"
+											/>
+											<div className="customer-info">
+												<h5 className="name">
+													Brentford Germain
+												</h5>
+												<h5 className="title">
+													CEO of Tukeng Tikang
+												</h5>
+											</div>
+										</div>
+									</CardContent>
+								</Card>
+							</SwiperSlide>
+
+							<SwiperSlide>
+								<Card className="item">
+									<CardContent>
+										<p>
+											Lorem Ipsum has been the industry's
+											standard dummy text ever since the
+											1500s, when an unknown printer took
+											a galley. Lorem Ipsum has been the
+											industry's standard dummy text ever
+											since the 1500s, when an unknown
+											printer took a galley.
+										</p>
+										<div className="customer">
+											<Avatar
+												src={MenCasuals}
+												className="customer-img"
+											/>
+											<div className="customer-info">
+												<h5 className="name">
+													Brentford Germain
+												</h5>
+												<h5 className="title">
+													CEO of Tukeng Tikang
+												</h5>
+											</div>
+										</div>
+									</CardContent>
+								</Card>
+							</SwiperSlide>
+
+							<SwiperSlide>
+								<Card className="item">
+									<CardContent>
+										<p>
+											Lorem Ipsum has been the industry's
+											standard dummy text ever since the
+											1500s, when an unknown printer took
+											a galley. Lorem Ipsum has been the
+											industry's standard dummy text ever
+											since the 1500s, when an unknown
+											printer took a galley.
+										</p>
+										<div className="customer">
+											<Avatar
+												src={MenCasuals}
+												className="customer-img"
+											/>
+											<div className="customer-info">
+												<h5 className="name">
+													Brentford Germain
+												</h5>
+												<h5 className="title">
+													CEO of Tukeng Tikang
+												</h5>
+											</div>
+										</div>
+									</CardContent>
+								</Card>
+							</SwiperSlide>
+						</Swiper>
 					</div>
 				</div>
 			</div>

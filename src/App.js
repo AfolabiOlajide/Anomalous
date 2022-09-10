@@ -12,6 +12,7 @@ import SignUp from "./pages/signUp";
 import WishList from './pages/wishlist';
 import Cart from './pages/cart'
 import Profile from "./pages/profile";
+import About from "./pages/about"
 // components imports
 import NavBar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
@@ -28,6 +29,7 @@ function App() {
 					<Route path="/" element={<HomePage />} />
 					<Route path="/marketplace" element={<MarketPlace />} />
 					<Route path="/blog" element={<Blog />} />
+					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/signup" element={<SignUp />} />
