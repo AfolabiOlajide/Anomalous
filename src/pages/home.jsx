@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Avatar, Button, Card, CardContent, Grid } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,6 +15,41 @@ import MenCasuals from "../assets/men-casuals.png";
 import WomenCasuals from "../assets/women-casuals.png";
 
 const HomePage = () => {
+
+	//Setting Inner width on every window change
+    const [dimensions, setDimensions] = useState({ 
+        height: window.innerHeight,
+        width: window.innerWidth
+    })
+    
+    useEffect(() => {
+        function handleResize() {
+        setDimensions({
+            height: window.innerHeight,
+            width: window.innerWidth
+        })
+    }
+        window.addEventListener('resize', handleResize)
+        return _ => {
+        window.removeEventListener('resize', handleResize)
+    }
+    })
+
+
+    // Setting Slides View on Inner Width Change.
+    const [slidesView, setSlidesView] = useState(2);
+    
+    useEffect(()=>{
+        slidesViewHandler()
+    },[dimensions.width])
+
+    function slidesViewHandler() {
+        if (window.innerWidth < 753){
+            setSlidesView(1)
+            return
+        }
+        setSlidesView(2)
+    }
 
 	return (
 		<h1 className="home">
@@ -154,7 +190,7 @@ const HomePage = () => {
 					<h2 className="heading">What Our Customers Say</h2>
 					<div className="items">
 						<Swiper
-							slidesPerView={2}
+							slidesPerView={slidesView}
 							spaceBetween={10}
 							slidesPerGroup={2}
 							loop={true}
