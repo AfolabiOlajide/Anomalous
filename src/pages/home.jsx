@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Avatar, Button, Card, CardContent, Grid } from "@mui/material";
+import { Avatar, Card, CardContent } from "@mui/material";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
@@ -9,11 +9,11 @@ import "swiper/css";
 // import "swiper/css/navigation";
 
 import "./home.scss";
-import BagImg from "../assets/about-bag.png";
 import Coporate from "../assets/coporate-wears.png";
 import MenCasuals from "../assets/men-casuals.png";
 import WomenCasuals from "../assets/women-casuals.png";
 import HomeHeader from "../components/homeHeader/HomeHeader";
+import HomeAbout from "../components/homeAbout/HomeAbout";
 
 const HomePage = () => {
 
@@ -55,43 +55,7 @@ const HomePage = () => {
 	return (
 		<h1 className="home">
 			<HomeHeader />
-
-			{/* about */}
-			<div className="about">
-				<div className="blue-box"></div>
-				<Grid container spacing={4} className="about-box">
-					<Grid item sm={6} xs={12} className="img">
-						<img src={BagImg} alt="" />
-					</Grid>
-					<Grid item sm={6} xs={12} className="about-desc">
-						<p>About us</p>
-						<h2 className="heading">
-							Looking for the right out fit for any event? We are
-							here for you!
-						</h2>
-						<p>
-							Lorem Ipsum has been the industry's standard dummy
-							text ever since the 1500s, when an unknown printer
-							took a galley. Lorem Ipsum has been the industry's
-							standard dummy text ever since the 1500s, when an
-							unknown printer took a galley. Lorem Ipsum has been
-							the industry's standard dummy text ever since the
-							1500s, when an unknown printer took a galley. <br />{" "}
-							<br /> Lorem Ipsum has been the industry's standard
-							dummy text ever since the 1500s, when an unknown
-							printer took a galley. Lorem Ipsum has been the
-							industry's standard dummy text ever since the 1500s,
-							when an unknown printer took a galley. Lorem Ipsum
-							has been the industry's standard dummy text ever
-							since the 1500s, when an unknown printer took a
-							galley.
-						</p>
-						<Link to="/about">
-							<Button>Learn More</Button>
-						</Link>
-					</Grid>
-				</Grid>
-			</div>
+			<HomeAbout />
 
 			{/* featured product */}
 			<div className="featured-product">
