@@ -11,7 +11,7 @@ const Footer = () => {
 	return (
 		<div className="footer">
 			<Grid container spacing={5}>
-				<Grid item xs={12} sm={5} className="about">
+				<Grid item xs={12} sm={5} className="footer-about">
 					<div className="logo">
 						<img src={logo} alt="" />
 					</div>
