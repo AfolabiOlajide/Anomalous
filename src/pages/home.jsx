@@ -13,6 +13,7 @@ import BagImg from "../assets/about-bag.png";
 import Coporate from "../assets/coporate-wears.png";
 import MenCasuals from "../assets/men-casuals.png";
 import WomenCasuals from "../assets/women-casuals.png";
+import HomeHeader from "../components/homeHeader/HomeHeader";
 
 const HomePage = () => {
 
@@ -53,29 +54,7 @@ const HomePage = () => {
 
 	return (
 		<h1 className="home">
-			{/* header */}
-			<div className="header">
-				<div className="desc">
-					<div className="desc-box">
-						<h1 className="heading">
-							An Exclusive yet affordable brand
-						</h1>
-						<p>
-							Get high quality wears that makes you look unique
-							and brings out the model in you
-						</p>
-						<Link to="/marketplace">
-							<Button
-								variant="contained"
-								style={{ color: "white" }}
-								className="btn"
-							>
-								Shop now
-							</Button>
-						</Link>
-					</div>
-				</div>
-			</div>
+			<HomeHeader />
 
 			{/* about */}
 			<div className="about">
