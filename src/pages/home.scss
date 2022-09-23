@@ -1,46 +1,4 @@
 .home {
-	.featured-product {
-		padding: 2rem 0;
-		background: var(--bg-primary);
-
-		.container {
-			width: 80%;
-			margin: 0 auto;
-			h1 {
-				font-size: 2rem;
-				margin-bottom: 2rem;
-			}
-
-			.featured-items {
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				gap: 2rem;
-
-				.featured-item {
-					position: relative;
-					box-shadow: 0 0 1rem rgb(232, 234, 235);
-					transition: 500ms all ease;
-					border-radius: 0.5rem;
-
-					&:hover {
-						transform: scale(1.02);
-					}
-					img {
-						border-radius: inherit;
-						width: 100%;
-						object-fit: cover;
-					}
-					.desc {
-						position: absolute;
-						bottom: 10%;
-						left: 10%;
-						color: white;
-						font-size: 1.5rem;
-					}
-				}
-			}
-		}
-	}
 
 	.testimonials{
 		background-color: white;
@@ -88,20 +46,7 @@
 @media screen and (max-width: 930px) {
 	.home {
 
-		.featured-product {
-			.container {
-				h1{
-					font-size: 1.5rem;
-				}
-				.featured-items {
-					.featured-item {
-						.desc {
-							font-size: 1rem;
-						}
-					}
-				}
-			}
-		}
+		
 
 		.testimonials{
 			.container{
@@ -136,22 +81,4 @@
 	}
 }
 
-// @media screen and (max-width: 820px) {
-// 	.home {
-// 	}
-// }
 
-@media screen and (max-width: 500px) {
-	.home {
-		.featured-product {
-			.container {
-				h1{
-					font-size: 1rem;
-				}
-				.featured-items {
-					grid-template-columns: repeat(2, 1fr);
-				}
-			}
-		}
-	}
-}
