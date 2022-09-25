@@ -4,14 +4,8 @@ import "./app.scss";
 import "./index.scss";
 // pages import
 import HomePage from "./pages/home";
-// import MarketPlace from "./pages/marketPlace";
 import Blog from "./pages/blog";
 import Contact from "./pages/contact";
-// import Login from "./pages/login";
-// import SignUp from "./pages/signUp";
-// import WishList from './pages/wishlist';
-// import Cart from './pages/cart'
-// import Profile from "./pages/profile";
 import About from "./pages/about"
 // components imports
 import NavBar from "./components/navbar/NavBar";
@@ -26,16 +20,10 @@ function User() {
 			<NavBar />
 			<main>
 				<Routes>
-					<Route path="*" element={<HomePage />} />
-					{/* <Route path="/marketplace" element={<MarketPlace />} /> */}
+					<Route path="/" element={<HomePage />} />
 					<Route path="/blog" element={<Blog />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
-					{/* <Route path="/login" element={<Login />} /> */}
-					{/* <Route path="/signup" element={<SignUp />} /> */}
-					{/* <Route path="/cart" element={<Cart />} />
-					<Route path="/wishlist" element={<WishList />} />
-					<Route path="/profile" element={<Profile />} /> */}
 				</Routes>
 			</main>
 			<NewsLetter />
