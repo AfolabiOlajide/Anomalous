@@ -3,6 +3,7 @@ import "./login.scss"
 
 import Input from "../ui/input/input";
 import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     return(
@@ -22,6 +23,10 @@ const Login = () => {
                         <Button variant="outlined" fullWidth>Sign in with Google</Button>
                     </div>
                 </form>
+                <div className="options">
+                    <Link to=''>forgot password?</Link>
+                    <Link to='/signup'>Sign Up</Link>
+                </div>
             </div>
             <div className="design-place"></div>
         </section>
