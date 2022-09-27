@@ -47,6 +47,30 @@
 
     .design-place{
         background-color: #F3F5F9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .circle{
+            background-color: var(--color-primary);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+        .blur{
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%);
+            // background-color: red;
+            background-color: rgba(169, 165, 165, .1);
+            backdrop-filter: blur(1rem);
+            width: 320px;
+            height: 160px;
+            border-radius: 0 0 160px 160px;
+        }
     }
 }
 
@@ -59,6 +83,22 @@
 }
 
 
+@media screen and (max-width: 1024px) {
+    .login{
+        .design-place{
+            .circle{
+                height: 160px;
+                width: 160px;
+            }
+            .blur{
+                width: 280px;
+                height: 140px;
+                border-radius: 0 0 140px 140px;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 700px) {
     .login{
         display: flex;
@@ -66,11 +106,20 @@
         .form-place{
             display: block;
             padding: 3rem;
-            height: 80vh;
+            min-height: 70vh;
         }
 
         .design-place{
-            height: 20vh;
+            height: 30vh;
+            .circle{
+                height: 100px;
+                width: 100px;
+            }
+            .blur{
+                width: 160px;
+                height: 80px;
+                border-radius: 0 0 80px 80px;
+            }
         }
     }
 }

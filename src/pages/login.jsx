@@ -28,7 +28,10 @@ const Login = () => {
                     <Link to='/signup'>Sign Up</Link>
                 </div>
             </div>
-            <div className="design-place"></div>
+            <div className="design-place">
+                <div className="circle"></div>
+                <div className="blur"></div>
+            </div>
         </section>
     )
 }
