@@ -36,6 +36,12 @@ const NavBar = () => {
 						<Tab label="Contact Us" className="navbar-link" />
 					</Link>
 				</Tabs>
+				<Link to="/login">
+					<Button variant="contained">Login</Button>
+				</Link>
+				<Link to="/signup">
+					<Button variant="outlined">Sign Up</Button>
+				</Link>
 			</div>
 			<div className="mobile-nav">
 				<IconButton>

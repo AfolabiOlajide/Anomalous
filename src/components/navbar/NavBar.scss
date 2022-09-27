@@ -23,6 +23,9 @@
 	}
 
 	.navbar-menu {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
 		.navbar-link {
 			color: white;
 		}
