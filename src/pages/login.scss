@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     min-height: 100vh;
+    padding: 1rem;
 
     .form-place{
         display: flex;
@@ -51,6 +52,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        border-radius: 1rem;
 
         .circle{
             background-color: var(--color-primary);
@@ -103,6 +105,7 @@
     .login{
         display: flex;
         flex-direction: column-reverse;
+        padding: 0;
         .form-place{
             display: block;
             padding: 3rem;
@@ -111,6 +114,7 @@
 
         .design-place{
             height: 30vh;
+            border-radius: none;
             .circle{
                 height: 100px;
                 width: 100px;

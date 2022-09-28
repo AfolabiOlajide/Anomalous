@@ -1,0 +1,88 @@
+.blog{
+    .banner{
+        width: 100%;
+        height: 70vh;
+        position: relative;
+
+
+        .banner-img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .desc-box{
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 2, 2, .3);
+            position: relative;
+
+            .desc{
+                position: absolute;
+                bottom: 20%;
+                left: 10%;
+                background: rgba(255, 255, 255, .5);
+                backdrop-filter: blur(2rem);
+                width: 40%;
+                padding: 2rem;
+                border-radius: 1rem;
+
+                h1{
+                    font-size: 3rem;
+                }
+                p{
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .blog{
+        .banner{
+            height: 50vh;
+            .desc-box{
+                .desc{
+                    h1{
+                        font-size: 2.3rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .blog{
+        .banner{
+            height: 40vh;
+            .desc-box{
+                .desc{
+                    padding: 1rem;
+                    width: 60%;
+                    h1{
+                        font-size: 1.2rem;
+                    }
+                    p{
+                        font-size: .7rem;
+                    }
+                    button{
+                        font-size: .7rem;
+                    }
+                }
+            }
+        }
+    }
+}
