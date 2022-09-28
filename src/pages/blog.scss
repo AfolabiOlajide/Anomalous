@@ -44,6 +44,14 @@
             }
         }
     }
+
+    .blog-posts{
+        width: 80%;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -83,6 +91,10 @@
                     }
                 }
             }
+        }
+
+        .blog-posts{
+            width: 90%;
         }
     }
 }

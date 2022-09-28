@@ -1,9 +1,17 @@
 import { Button } from "@mui/material";
 
 import FeaturedBanner from "../assets/blog-banner.png"
+import BlogPost from "../components/blogPost/BlogPost";
+import { DummyBlogPosts } from "../dummyApi";
 import "./blog.scss";
 
+
 const Blog = () => {
+
+    const Post = DummyBlogPosts.map(post => (
+        <BlogPost image={post.img} description={post.description} title={post.title} />
+    ))
+
     return(
         <section className="blog">
             <div className="banner">
@@ -18,7 +26,9 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-            <div className="blog-posts"></div>
+            <div className="blog-posts">
+                {Post}
+            </div>
         </section>
     )
 }
